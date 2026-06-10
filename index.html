@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Projetos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="logo-container">
+                <img src="logo.png" alt="Colégio Progresso" class="logo-topo">
+            </div>
+            <div class="hero-text">
+                <h1>Hub de Projetos Digitais</h1>
+                <span class="badge-tag">Atividades Práticas</span>
+                <p>Explore os projetos desenvolvidos, ganhe XP e suba de nível para desbloquear os próximos desafios.</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="dashboard">
+            <div class="xp-card">
+                <div class="card-header">
+                    <h2 id="usuarioLogado">Aluno: Visitante</h2>
+                    <div class="status-badges">
+                        <span id="nivel" class="badge-nivel">Nível: 1</span>
+                        <span id="xp" class="badge-xp">XP: 0</span>
+                    </div>
+                </div>
+                <div class="barra-xp-container">
+                    <div class="barra-xp">
+                        <div id="progresso-xp"></div>
+                    </div>
+                    <p class="xp-subtexto">Ganhe 100 XP a cada novo projeto jogado para subir de nível.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cards">
+            
+            <div class="card disponivel" id="card-1" data-id="1" data-req="0" data-url="https://merry-treacle-727dc3.netlify.app/" onclick="clicarProjeto(this)">
+                <div class="icone-box">🕹️</div>
+                <h3>Projeto 01</h3>
+                <p>Aplicação Interativa</p>
+                <span class="status-tag">➔ Jogar</span>
+            </div>
+
+            <div class="card bloqueado" id="card-2" data-id="2" data-req="100" data-url="https://chimerical-shortbread-6ee684.netlify.app/" onclick="clicarProjeto(this)">
+                <div class="icone-box">🔒</div>
+                <h3>Projeto 02</h3>
+                <p>Desenvolvimento Web</p>
+                <span class="status-tag">🔒 Nível 2</span>
+            </div>
+
+            <div class="card bloqueado" id="card-3" data-id="3" data-req="200" data-url="https://rococo-frangollo-06f594.netlify.app/" onclick="clicarProjeto(this)">
+                <div class="icone-box">🔒</div>
+                <h3>Projeto 03</h3>
+                <p>Experiência Digital</p>
+                <span class="status-tag">🔒 Nível 3</span>
+            </div>
+
+            <div class="card bloqueado" id="card-4" data-id="4" data-req="300" data-url="https://stalwart-begonia-cb3516.netlify.app/" onclick="clicarProjeto(this)">
+                <div class="icone-box">🔒</div>
+                <h3>Projeto 04</h3>
+                <p>Projeto Final</p>
+                <span class="status-tag">🔒 Nível 4</span>
+            </div>
+
+            <div class="card bloqueado" id="card-5" data-id="5" data-req="400" data-url="https://coruscating-biscuit-1ff3af.netlify.app/" onclick="clicarProjeto(this)">
+                <div class="icone-box">🔒</div>
+                <h3>Projeto 05</h3>
+                <p>Cyber Quiz</p>
+                <span class="status-tag">🔒 Nível 5</span>
+            </div>
+
+            <div class="card bloqueado" id="card-6" data-id="6" data-req="500" data-url="https://mellow-pithivier-0a980d.netlify.app/" onclick="clicarProjeto(this)">
+                <div class="icone-box">🔒</div>
+                <h3>Projeto 06</h3>
+                <p>Desafio da Rede</p>
+                <span class="status-tag">🔒 Nível 6</span>
+            </div>
+
+        </section>
+
+        <section class="sobre">
+            <div class="sobre-box">
+                <h2>Sobre a Plataforma</h2>
+                <p>
+                    Este ecossistema foi desenhado para centralizar as criações digitais da nossa turma. 
+                    Mais do que um portfólio, é um ambiente gamificado onde cada entrega expande o conhecimento 
+                    coletivo e valida nossa evolução prática em programação.
+                </p>
+            </div>
+        </section>
+
+        <section class="qr-area">
+            <h2>Acesso Rápido</h2>
+            <p>Escaneie para acessar o portal direto pelo celular.</p>
+            <br>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=PortalProgresso" alt="QR Code" class="qr">
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
