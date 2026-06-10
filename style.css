@@ -1,304 +1,497 @@
-/* =====================
-CONFIGURAÇÕES GERAIS (PRETO E BRANCO)
-===================== */
+/* ==========================
+RESET
+========================== */
+
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
 }
 
 body{
-    background: #000000;
-    color: #ffffff;
-    overflow-x: hidden;
+    background:#050505;
+    color:white;
+    overflow-x:hidden;
 }
 
-/* Container de proteção branco para a Logo */
-.logo-container {
-    background: #ffffff;
-    padding: 12px 20px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 15px rgba(255,255,255,0.1);
+/* ==========================
+SCROLLBAR
+========================== */
+
+::-webkit-scrollbar{
+    width:10px;
 }
 
-.logo-topo {
-    width: 130px;
-    height: auto;
-    display: block;
+::-webkit-scrollbar-track{
+    background:#0f0f0f;
 }
 
-/* Telas de Login/Cadastro */
-.auth-page{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #000000;
+::-webkit-scrollbar-thumb{
+    background:#333;
+    border-radius:20px;
 }
 
-.auth-box{
-    width: 380px;
-    padding: 40px 30px;
-    background: #111111;
-    border: 1px solid #222222;
-    border-radius: 12px;
-    text-align: center;
+::-webkit-scrollbar-thumb:hover{
+    background:#555;
 }
 
-.auth-box h1{
-    font-size: 1.6rem;
-    margin-bottom: 8px;
-}
+/* ==========================
+TOPO
+========================== */
 
-.auth-box p{
-    color: #666666;
-    font-size: 0.9rem;
-    margin-bottom: 25px;
-}
-
-.auth-box input{
-    width: 100%;
-    padding: 14px;
-    margin-bottom: 14px;
-    border: 1px solid #222222;
-    border-radius: 6px;
-    background: #000000;
-    color: white;
-    outline: none;
-}
-
-.auth-box input:focus {
-    border-color: #ffffff;
-}
-
-.auth-box button{
-    width: 100%;
-    padding: 14px;
-    border: 1px solid #ffffff;
-    border-radius: 6px;
-    background: #ffffff;
-    color: #000000;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.auth-box button:hover{
-    background: #000000;
-    color: #ffffff;
-}
-
-.auth-box a{
-    display: block;
-    margin-top: 20px;
-    color: #666666;
-    text-decoration: none;
-    font-size: 0.85rem;
-}
-
-.auth-box a:hover {
-    color: #ffffff;
-}
-
-/* =====================
-PORTAL PRINCIPAL
-===================== */
 .hero{
-    background: #000000;
-    padding: 60px 20px 30px 20px;
-    border-bottom: 1px solid #111111;
+    padding:50px 30px;
+    border-bottom:1px solid #151515;
+    background:
+    linear-gradient(
+        180deg,
+        #0a0a0a,
+        #050505
+    );
 }
 
 .hero-content{
-    max-width: 1100px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    gap: 40px;
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    gap:40px;
+}
+
+.logo-container{
+    background:white;
+    padding:15px;
+    border-radius:12px;
+}
+
+.logo-topo{
+    width:180px;
+    display:block;
+}
+
+.hero-text{
+    flex:1;
 }
 
 .hero-text h1{
-    font-size: 2.4rem;
-    font-weight: 800;
-}
-
-.badge-tag {
-    display: inline-block;
-    padding: 4px 10px;
-    background: #111111;
-    border: 1px solid #333333;
-    color: #ffffff;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    margin: 8px 0 12px 0;
+    font-size:3rem;
+    margin-bottom:10px;
 }
 
 .hero-text p{
-    color: #666666;
-    font-size: 1rem;
-    max-width: 600px;
+    color:#a0a0a0;
+    max-width:700px;
+    line-height:1.7;
 }
 
-/* Painel de XP */
+.badge-tag{
+    display:inline-block;
+    background:#ffffff;
+    color:#000;
+    padding:6px 14px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+/* ==========================
+DASHBOARD
+========================== */
+
 .dashboard{
-    max-width: 1100px;
-    margin: 30px auto 10px auto;
-    padding: 0 20px;
+    max-width:1200px;
+    margin:30px auto;
+    padding:0 20px;
 }
 
 .xp-card{
-    background: #111111;
-    border: 1px solid #222222;
-    padding: 25px;
-    border-radius: 12px;
+    background:#111111;
+    border:1px solid #222;
+    border-radius:16px;
+    padding:25px;
 }
 
-.card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.card-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
 }
 
-.status-badges {
-    display: flex;
-    gap: 10px;
+#usuarioLogado{
+    margin-bottom:5px;
 }
 
-.badge-nivel, .badge-xp {
-    padding: 6px 14px;
-    border-radius: 6px;
-    font-weight: 700;
-    font-size: 0.85rem;
+.mini-info{
+    color:#888;
+    font-size:14px;
 }
 
-.badge-nivel { background: #ffffff; color: #000000; }
-.badge-xp { background: #000000; border: 1px solid #222222; color: #ffffff; }
+.status-badges{
+    display:flex;
+    gap:10px;
+}
 
-.barra-xp-container { margin-top: 20px; }
+.badge-nivel{
+    background:white;
+    color:black;
+    padding:8px 14px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.badge-xp{
+    background:#1b1b1b;
+    border:1px solid #333;
+    padding:8px 14px;
+    border-radius:8px;
+}
+
+.barra-xp-container{
+    margin-top:20px;
+}
 
 .barra-xp{
-    height: 8px;
-    background: #000000;
-    border-radius: 4px;
-    overflow: hidden;
-    border: 1px solid #222222;
+    width:100%;
+    height:12px;
+    background:#050505;
+    border-radius:30px;
+    overflow:hidden;
+    border:1px solid #222;
 }
 
 #progresso-xp{
-    height: 100%;
-    width: 0%;
-    background: #ffffff;
-    transition: 0.4s ease;
+    width:0%;
+    height:100%;
+    background:
+    linear-gradient(
+        90deg,
+        white,
+        #d9d9d9
+    );
+    transition:0.5s;
 }
 
-.xp-subtexto {
-    font-size: 0.8rem;
-    color: #444444;
-    margin-top: 6px;
+.xp-subtexto{
+    margin-top:8px;
+    color:#666;
+    font-size:13px;
 }
 
-/* GRID DE CARDS */
+/* ==========================
+ESTATÍSTICAS
+========================== */
+
+.estatisticas{
+    max-width:1200px;
+    margin:auto;
+    padding:0 20px 25px;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.estatistica-card{
+    background:#111;
+    border:1px solid #222;
+    border-radius:16px;
+    padding:25px;
+    text-align:center;
+}
+
+.estatistica-card h3{
+    color:#888;
+    font-size:15px;
+    margin-bottom:10px;
+}
+
+.estatistica-card span{
+    font-size:2rem;
+    font-weight:bold;
+}
+
+/* ==========================
+PROJETOS
+========================== */
+
 .cards{
-    max-width: 1100px;
-    margin: auto;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:20px;
 }
 
 .card{
-    background: #111111;
-    border: 1px solid #222222;
-    padding: 30px 20px;
-    border-radius: 12px;
-    text-align: center;
-    transition: 0.2s ease;
+    background:#111;
+    border:1px solid #222;
+    border-radius:18px;
+    padding:30px;
+    text-align:center;
+    transition:0.3s;
 }
 
-/* Estados Dinâmicos */
-.card.disponivel{
-    cursor: pointer;
-    border-color: #444444;
+.card h3{
+    margin-bottom:10px;
 }
 
-.card.disponivel:hover{
-    border-color: #ffffff;
-    background: #161616;
+.card p{
+    color:#888;
+    margin-bottom:20px;
 }
 
-.card.concluido {
-    border-color: #222222;
-    background: #050505;
+.disponivel{
+    cursor:pointer;
 }
 
-.card.concluido:hover {
-    border-color: #666666;
+.disponivel:hover{
+    transform:translateY(-6px);
+    border-color:white;
 }
 
-.card.bloqueado{
-    opacity: 0.3;
-    cursor: not-allowed;
-    background: #000000;
-    border-style: dashed;
+.bloqueado{
+    opacity:.45;
+    cursor:not-allowed;
 }
 
-.icone-box {
-    width: 60px;
-    height: 60px;
-    background: #000000;
-    border: 1px solid #222222;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto 15px auto;
-    font-size: 1.8rem;
+.icone-box{
+    width:70px;
+    height:70px;
+
+    margin:auto;
+    margin-bottom:20px;
+
+    border-radius:14px;
+
+    background:#050505;
+    border:1px solid #222;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:30px;
 }
 
-.card.disponivel:hover .icone-box {
-    background: #ffffff;
-    color: #000000;
+.status-tag{
+    display:inline-block;
+    padding:8px 14px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:bold;
 }
 
-.card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 4px;
+.disponivel .status-tag{
+    background:white;
+    color:black;
 }
 
-.card p {
-    color: #666666;
-    font-size: 0.9rem;
-    margin-bottom: 20px;
+.bloqueado .status-tag{
+    border:1px solid #333;
+    color:#777;
 }
 
-.status-tag {
-    display: inline-block;
-    padding: 5px 14px;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    font-weight: 700;
+/* ==========================
+SOBRE
+========================== */
+
+.sobre{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
 }
 
-.disponivel .status-tag { background: #ffffff; color: #000000; }
-.bloqueado .status-tag { background: transparent; border: 1px solid #222222; color: #444444; }
-.concluido .status-tag { background: #222222; color: #888888; }
+.sobre-box{
+    background:#111;
+    border:1px solid #222;
+    border-radius:16px;
+    padding:30px;
+}
 
-/* Rodapé e Sobre */
-.sobre{ max-width: 1100px; margin: 20px auto; padding: 0 20px; }
-.sobre-box{ background: #111111; border: 1px solid #222222; padding: 30px; border-radius: 12px; line-height: 1.6; }
-.sobre-box h2 { font-size: 1.4rem; margin-bottom: 10px; }
-.sobre-box p { color: #666666; }
-.qr-area{ max-width: 1100px; margin: 30px auto; text-align: center; }
-.qr-area p { color: #444444; }
-.qr{ width: 140px; margin-top: 15px; border-radius: 6px; border: 4px solid #111111; filter: invert(1); }
+.sobre-box h2{
+    margin-bottom:15px;
+}
 
-@media(max-width: 768px){
-    .hero-content { flex-direction: column; text-align: center; }
-    .cards { grid-template-columns: 1fr; }
+.sobre-box p{
+    color:#aaa;
+    line-height:1.8;
+}
+
+.sobre-box ul{
+    margin-top:15px;
+    padding-left:20px;
+}
+
+.sobre-box li{
+    margin-bottom:10px;
+    color:#aaa;
+}
+
+/* ==========================
+QR CODE
+========================== */
+
+.qr-area{
+    max-width:1200px;
+    margin:20px auto 60px;
+    text-align:center;
+    padding:20px;
+}
+
+.qr-area h2{
+    margin-bottom:10px;
+}
+
+.qr-area p{
+    color:#888;
+}
+
+.qr{
+    width:260px;
+    max-width:100%;
+
+    margin-top:25px;
+
+    border-radius:20px;
+
+    border:4px solid #111;
+
+    box-shadow:
+    0 0 25px rgba(255,255,255,.08);
+
+    transition:0.3s;
+}
+
+.qr:hover{
+    transform:scale(1.04);
+}
+
+/* ==========================
+LOGIN E CADASTRO
+========================== */
+
+.auth-page{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#050505;
+}
+
+.auth-box{
+    width:400px;
+
+    background:#111;
+
+    border:1px solid #222;
+
+    border-radius:20px;
+
+    padding:40px;
+}
+
+.auth-box h1{
+    margin-bottom:10px;
+}
+
+.auth-box p{
+    color:#888;
+    margin-bottom:25px;
+}
+
+.auth-box input{
+    width:100%;
+
+    padding:14px;
+
+    margin-bottom:15px;
+
+    background:#050505;
+
+    border:1px solid #222;
+
+    border-radius:10px;
+
+    color:white;
+}
+
+.auth-box button{
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:white;
+
+    color:black;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.auth-box button:hover{
+    opacity:.85;
+}
+
+.auth-box a{
+    display:block;
+
+    margin-top:15px;
+
+    color:#888;
+
+    text-decoration:none;
+
+    text-align:center;
+}
+
+/* ==========================
+RESPONSIVO
+========================== */
+
+@media(max-width:768px){
+
+.hero-content{
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero-text h1{
+    font-size:2rem;
+}
+
+.card-header{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.status-badges{
+    width:100%;
+}
+
+.badge-nivel,
+.badge-xp{
+    flex:1;
+    text-align:center;
+}
+
+.logo-topo{
+    width:140px;
+}
+
 }
