@@ -2,49 +2,28 @@
 <html lang="pt-BR">
 
 <head>
-
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-
-<title>Hub de Projetos Digitais</title>
+<title>Feira Tecnológica 2025</title>
 
 <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
-<header class="hero">
+<header>
 
-<div class="hero-content">
+<div class="topo">
 
-<div class="logo-container">
+<img src="logo.png" alt="Colégio Progresso">
 
-<img
-src="logo.png"
-alt="Colégio Progresso"
-class="logo-topo">
+<div>
 
-</div>
-
-<div class="hero-text">
-
-<h1>Hub de Projetos Digitais</h1>
-
-<span class="badge-tag">
-Colégio Progresso
-</span>
+<h1>Feira Tecnológica 2025</h1>
 
 <p>
-
-Portal criado para centralizar os projetos
-desenvolvidos durante as atividades práticas.
-
-Acesse os trabalhos, acompanhe seu progresso
-e desbloqueie novos desafios.
-
+Portal oficial dos projetos desenvolvidos pelos alunos.
 </p>
 
 </div>
@@ -55,45 +34,39 @@ e desbloqueie novos desafios.
 
 <main>
 
-<section class="dashboard">
-
-<div class="xp-card">
-
-<div class="card-header">
-
-<div>
+<section class="bemvindo">
 
 <h2 id="usuarioLogado">
 Aluno: Visitante
 </h2>
 
-<p class="mini-info">
-Bem-vindo ao portal de projetos.
+<p>
+Bem-vindo ao ambiente de projetos digitais.
 </p>
 
-</div>
+</section>
 
-<div class="status-badges">
+<section class="progresso">
 
-<span id="nivel"
-class="badge-nivel">
+<div class="caixa">
 
-Nível: 1
+<h3>Experiência</h3>
 
-</span>
-
-<span id="xp"
-class="badge-xp">
-
-XP: 0
-
-</span>
+<h2 id="xp">XP: 0</h2>
 
 </div>
 
+<div class="caixa">
+
+<h3>Nível Atual</h3>
+
+<h2 id="nivel">Nível: 1</h2>
+
 </div>
 
-<div class="barra-xp-container">
+</section>
+
+<section class="barra-container">
 
 <div class="barra-xp">
 
@@ -101,244 +74,135 @@ XP: 0
 
 </div>
 
-<p class="xp-subtexto">
+</section>
 
-Cada projeto acessado pela primeira vez
-concede 100 XP.
+<section class="titulo">
 
+<h2>Projetos Disponíveis</h2>
+
+<p>
+Clique para acessar cada projeto.
 </p>
 
-</div>
-
-</div>
-
 </section>
 
-<section class="estatisticas">
+<section class="projetos">
 
-<div class="estatistica-card">
-
-<h3>Projetos</h3>
-
-<span>6</span>
-
-</div>
-
-<div class="estatistica-card">
-
-<h3>XP por Projeto</h3>
-
-<span>100</span>
-
-</div>
-
-<div class="estatistica-card">
-
-<h3>Status</h3>
-
-<span>Ativo</span>
-
-</div>
-
-</section>
-
-<section class="cards">
-
-<div
-class="card disponivel"
-id="card-1"
+<div class="projeto disponivel"
 data-id="1"
 data-req="0"
 data-url="https://merry-treacle-727dc3.netlify.app/"
 onclick="clicarProjeto(this)">
 
-<div class="icone-box">🕹️</div>
-
 <h3>Projeto 01</h3>
 
 <p>Aplicação Interativa</p>
 
-<span class="status-tag">
-
-➜ Abrir Projeto
-
-</span>
+<button>Acessar</button>
 
 </div>
 
-<div
-class="card bloqueado"
-id="card-2"
+<div class="projeto bloqueado"
 data-id="2"
 data-req="100"
 data-url="https://chimerical-shortbread-6ee684.netlify.app/"
 onclick="clicarProjeto(this)">
 
-<div class="icone-box">🔒</div>
-
 <h3>Projeto 02</h3>
 
 <p>Desenvolvimento Web</p>
 
-<span class="status-tag">
-
-🔒 Nível 2
-
-</span>
+<button>Bloqueado</button>
 
 </div>
 
-<div
-class="card bloqueado"
-id="card-3"
+<div class="projeto bloqueado"
 data-id="3"
 data-req="200"
 data-url="https://rococo-frangollo-06f594.netlify.app/"
 onclick="clicarProjeto(this)">
 
-<div class="icone-box">🔒</div>
-
 <h3>Projeto 03</h3>
 
 <p>Experiência Digital</p>
 
-<span class="status-tag">
-
-🔒 Nível 3
-
-</span>
+<button>Bloqueado</button>
 
 </div>
 
-<div
-class="card bloqueado"
-id="card-4"
+<div class="projeto bloqueado"
 data-id="4"
 data-req="300"
 data-url="https://stalwart-begonia-cb3516.netlify.app/"
 onclick="clicarProjeto(this)">
 
-<div class="icone-box">🔒</div>
-
 <h3>Projeto 04</h3>
 
 <p>Projeto Final</p>
 
-<span class="status-tag">
-
-🔒 Nível 4
-
-</span>
+<button>Bloqueado</button>
 
 </div>
 
-<div
-class="card bloqueado"
-id="card-5"
+<div class="projeto bloqueado"
 data-id="5"
 data-req="400"
 data-url="https://coruscating-biscuit-1ff3af.netlify.app/"
 onclick="clicarProjeto(this)">
 
-<div class="icone-box">🔒</div>
-
 <h3>Projeto 05</h3>
 
 <p>Cyber Quiz</p>
 
-<span class="status-tag">
-
-🔒 Nível 5
-
-</span>
+<button>Bloqueado</button>
 
 </div>
 
-<div
-class="card bloqueado"
-id="card-6"
+<div class="projeto bloqueado"
 data-id="6"
 data-req="500"
 data-url="https://mellow-pithivier-0a980d.netlify.app/"
 onclick="clicarProjeto(this)">
 
-<div class="icone-box">🔒</div>
-
 <h3>Projeto 06</h3>
 
 <p>Desafio da Rede</p>
 
-<span class="status-tag">
-
-🔒 Nível 6
-
-</span>
+<button>Bloqueado</button>
 
 </div>
 
 </section>
 
-<section class="sobre">
-
-<div class="sobre-box">
+<section class="informacoes">
 
 <h2>Sobre a Plataforma</h2>
 
 <p>
 
-Esta plataforma foi desenvolvida com o objetivo
-de reunir os projetos digitais da turma em um
-único ambiente.
+Este portal foi criado para reunir os projetos
+desenvolvidos durante as atividades práticas
+realizadas pelos alunos.
 
-O sistema utiliza elementos de gamificação,
-permitindo que cada aluno acompanhe sua evolução
-através de níveis e experiência adquirida.
+O objetivo é facilitar o acesso aos trabalhos,
+acompanhar a evolução dos estudantes e incentivar
+o uso da tecnologia na educação.
 
 </p>
 
-</div>
-
 </section>
 
-<section class="sobre">
+<section class="qr-section">
 
-<div class="sobre-box">
-
-<h2>Próximas Atualizações</h2>
-
-<ul>
-
-<li>🏆 Sistema de Conquistas</li>
-
-<li>📊 Ranking de Alunos</li>
-
-<li>🎯 Metas Semanais</li>
-
-<li>💾 Histórico de Projetos</li>
-
-</ul>
-
-</div>
-
-</section>
-
-<section class="qr-area">
-
-<h2>📱 Acesso pelo Celular</h2>
+<h2>Acesso pelo Celular</h2>
 
 <p>
-
-Escaneie o QR Code para abrir
-o portal diretamente em seu smartphone.
-
+Escaneie o QR Code abaixo.
 </p>
-
-<br>
 
 <img
 src="QR-CODE.png"
-alt="QR Code"
-class="qr">
+alt="QR Code">
 
 </section>
 
