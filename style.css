@@ -1,250 +1,224 @@
-/* ==========================
+```css
+/* =========================
 RESET
-========================== */
+========================= */
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-    background:#050505;
-    color:white;
-    overflow-x:hidden;
+    background:#f4f6f9;
+    color:#222;
 }
 
-/* ==========================
-SCROLLBAR
-========================== */
-
-::-webkit-scrollbar{
-    width:10px;
-}
-
-::-webkit-scrollbar-track{
-    background:#0f0f0f;
-}
-
-::-webkit-scrollbar-thumb{
-    background:#333;
-    border-radius:20px;
-}
-
-::-webkit-scrollbar-thumb:hover{
-    background:#555;
-}
-
-/* ==========================
+/* =========================
 TOPO
-========================== */
+========================= */
 
-.hero{
-    padding:50px 30px;
-    border-bottom:1px solid #151515;
-    background:
-    linear-gradient(
-        180deg,
-        #0a0a0a,
-        #050505
-    );
-}
-
-.hero-content{
-    max-width:1200px;
-    margin:auto;
-    display:flex;
-    align-items:center;
-    gap:40px;
-}
-
-.logo-container{
-    background:white;
-    padding:15px;
-    border-radius:12px;
-}
-
-.logo-topo{
-    width:180px;
-    display:block;
-}
-
-.hero-text{
-    flex:1;
-}
-
-.hero-text h1{
-    font-size:3rem;
-    margin-bottom:10px;
-}
-
-.hero-text p{
-    color:#a0a0a0;
-    max-width:700px;
-    line-height:1.7;
-}
-
-.badge-tag{
-    display:inline-block;
-    background:#ffffff;
-    color:#000;
-    padding:6px 14px;
-    border-radius:30px;
-    font-size:13px;
-    font-weight:bold;
-    margin-bottom:15px;
-}
-
-/* ==========================
-DASHBOARD
-========================== */
-
-.dashboard{
-    max-width:1200px;
-    margin:30px auto;
-    padding:0 20px;
-}
-
-.xp-card{
-    background:#111111;
-    border:1px solid #222;
-    border-radius:16px;
+header{
+    background:#0b4f8a;
+    color:white;
     padding:25px;
 }
 
-.card-header{
+.topo{
+    max-width:1200px;
+    margin:auto;
+
     display:flex;
-    justify-content:space-between;
     align-items:center;
-    gap:20px;
+    gap:25px;
 }
 
-#usuarioLogado{
+.topo img{
+    width:130px;
+
+    background:white;
+    padding:10px;
+
+    border-radius:10px;
+}
+
+.topo h1{
+    font-size:2rem;
     margin-bottom:5px;
 }
 
-.mini-info{
-    color:#888;
-    font-size:14px;
+.topo p{
+    opacity:.9;
 }
 
-.status-badges{
-    display:flex;
-    gap:10px;
+/* =========================
+CONTEÚDO
+========================= */
+
+main{
+    max-width:1200px;
+    margin:auto;
+    padding:30px;
 }
 
-.badge-nivel{
+.bemvindo{
     background:white;
-    color:black;
-    padding:8px 14px;
-    border-radius:8px;
-    font-weight:bold;
+
+    padding:25px;
+
+    border-radius:12px;
+
+    box-shadow:
+    0 2px 8px rgba(0,0,0,.08);
+
+    margin-bottom:20px;
 }
 
-.badge-xp{
-    background:#1b1b1b;
-    border:1px solid #333;
-    padding:8px 14px;
-    border-radius:8px;
+.bemvindo h2{
+    color:#0b4f8a;
+    margin-bottom:10px;
 }
 
-.barra-xp-container{
-    margin-top:20px;
+/* =========================
+PROGRESSO
+========================= */
+
+.progresso{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+
+    margin-bottom:20px;
+}
+
+.caixa{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:12px;
+
+    box-shadow:
+    0 2px 8px rgba(0,0,0,.08);
+
+    text-align:center;
+}
+
+.caixa h3{
+    color:#666;
+    margin-bottom:10px;
+}
+
+.caixa h2{
+    color:#0b4f8a;
+}
+
+/* =========================
+BARRA XP
+========================= */
+
+.barra-container{
+    margin-bottom:35px;
 }
 
 .barra-xp{
     width:100%;
-    height:12px;
-    background:#050505;
-    border-radius:30px;
+    height:20px;
+
+    background:#dbe4ee;
+
+    border-radius:50px;
+
     overflow:hidden;
-    border:1px solid #222;
 }
 
 #progresso-xp{
+
     width:0%;
+
     height:100%;
+
     background:
     linear-gradient(
         90deg,
-        white,
-        #d9d9d9
+        #0b4f8a,
+        #2f80c5
     );
-    transition:0.5s;
+
+    transition:.5s;
 }
 
-.xp-subtexto{
-    margin-top:8px;
+/* =========================
+TÍTULO
+========================= */
+
+.titulo{
+    margin-bottom:25px;
+}
+
+.titulo h2{
+    color:#0b4f8a;
+}
+
+.titulo p{
     color:#666;
-    font-size:13px;
 }
 
-/* ==========================
-ESTATÍSTICAS
-========================== */
-
-.estatisticas{
-    max-width:1200px;
-    margin:auto;
-    padding:0 20px 25px;
-
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-}
-
-.estatistica-card{
-    background:#111;
-    border:1px solid #222;
-    border-radius:16px;
-    padding:25px;
-    text-align:center;
-}
-
-.estatistica-card h3{
-    color:#888;
-    font-size:15px;
-    margin-bottom:10px;
-}
-
-.estatistica-card span{
-    font-size:2rem;
-    font-weight:bold;
-}
-
-/* ==========================
+/* =========================
 PROJETOS
-========================== */
+========================= */
 
-.cards{
-    max-width:1200px;
-    margin:auto;
-    padding:20px;
+.projetos{
 
     display:grid;
+
     grid-template-columns:
     repeat(auto-fit,minmax(280px,1fr));
 
     gap:20px;
 }
 
-.card{
-    background:#111;
-    border:1px solid #222;
-    border-radius:18px;
-    padding:30px;
-    text-align:center;
-    transition:0.3s;
+.projeto{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:12px;
+
+    box-shadow:
+    0 2px 8px rgba(0,0,0,.08);
+
+    transition:.3s;
 }
 
-.card h3{
+.projeto h3{
+    color:#0b4f8a;
     margin-bottom:10px;
 }
 
-.card p{
-    color:#888;
+.projeto p{
+    color:#666;
     margin-bottom:20px;
+}
+
+.projeto button{
+
+    border:none;
+
+    padding:10px 20px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-weight:bold;
 }
 
 .disponivel{
@@ -252,246 +226,194 @@ PROJETOS
 }
 
 .disponivel:hover{
-    transform:translateY(-6px);
-    border-color:white;
+    transform:translateY(-5px);
+}
+
+.disponivel button{
+    background:#0b4f8a;
+    color:white;
 }
 
 .bloqueado{
-    opacity:.45;
-    cursor:not-allowed;
+    opacity:.55;
 }
 
-.icone-box{
-    width:70px;
-    height:70px;
-
-    margin:auto;
-    margin-bottom:20px;
-
-    border-radius:14px;
-
-    background:#050505;
-    border:1px solid #222;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-size:30px;
+.bloqueado button{
+    background:#999;
+    color:white;
 }
 
-.status-tag{
-    display:inline-block;
-    padding:8px 14px;
-    border-radius:30px;
-    font-size:13px;
-    font-weight:bold;
-}
+/* =========================
+INFORMAÇÕES
+========================= */
 
-.disponivel .status-tag{
+.informacoes{
+
+    margin-top:40px;
+
     background:white;
-    color:black;
+
+    padding:25px;
+
+    border-radius:12px;
+
+    box-shadow:
+    0 2px 8px rgba(0,0,0,.08);
 }
 
-.bloqueado .status-tag{
-    border:1px solid #333;
-    color:#777;
-}
-
-/* ==========================
-SOBRE
-========================== */
-
-.sobre{
-    max-width:1200px;
-    margin:auto;
-    padding:20px;
-}
-
-.sobre-box{
-    background:#111;
-    border:1px solid #222;
-    border-radius:16px;
-    padding:30px;
-}
-
-.sobre-box h2{
+.informacoes h2{
+    color:#0b4f8a;
     margin-bottom:15px;
 }
 
-.sobre-box p{
-    color:#aaa;
+.informacoes p{
     line-height:1.8;
 }
 
-.sobre-box ul{
-    margin-top:15px;
-    padding-left:20px;
-}
-
-.sobre-box li{
-    margin-bottom:10px;
-    color:#aaa;
-}
-
-/* ==========================
+/* =========================
 QR CODE
-========================== */
+========================= */
 
-.qr-area{
-    max-width:1200px;
-    margin:20px auto 60px;
+.qr-section{
+
+    margin-top:30px;
+
     text-align:center;
-    padding:20px;
-}
 
-.qr-area h2{
-    margin-bottom:10px;
-}
+    background:white;
 
-.qr-area p{
-    color:#888;
-}
+    padding:25px;
 
-.qr{
-    width:260px;
-    max-width:100%;
-
-    margin-top:25px;
-
-    border-radius:20px;
-
-    border:4px solid #111;
+    border-radius:12px;
 
     box-shadow:
-    0 0 25px rgba(255,255,255,.08);
-
-    transition:0.3s;
+    0 2px 8px rgba(0,0,0,.08);
 }
 
-.qr:hover{
-    transform:scale(1.04);
+.qr-section h2{
+    color:#0b4f8a;
 }
 
-/* ==========================
+.qr-section p{
+    margin:10px 0 20px;
+    color:#666;
+}
+
+.qr-section img{
+
+    width:250px;
+
+    max-width:100%;
+
+    border-radius:12px;
+
+    border:1px solid #ddd;
+}
+
+/* =========================
 LOGIN E CADASTRO
-========================== */
+========================= */
 
 .auth-page{
+
     min-height:100vh;
 
     display:flex;
+
     justify-content:center;
+
     align-items:center;
 
-    background:#050505;
+    background:#f4f6f9;
 }
 
 .auth-box{
+
     width:400px;
 
-    background:#111;
+    background:white;
 
-    border:1px solid #222;
+    padding:35px;
 
-    border-radius:20px;
+    border-radius:12px;
 
-    padding:40px;
+    box-shadow:
+    0 2px 8px rgba(0,0,0,.1);
 }
 
 .auth-box h1{
+    color:#0b4f8a;
     margin-bottom:10px;
 }
 
 .auth-box p{
-    color:#888;
-    margin-bottom:25px;
+    color:#666;
+    margin-bottom:20px;
 }
 
 .auth-box input{
+
     width:100%;
 
-    padding:14px;
+    padding:12px;
 
     margin-bottom:15px;
 
-    background:#050505;
+    border:1px solid #ccc;
 
-    border:1px solid #222;
-
-    border-radius:10px;
-
-    color:white;
+    border-radius:8px;
 }
 
 .auth-box button{
+
     width:100%;
 
-    padding:14px;
+    padding:12px;
 
     border:none;
 
-    border-radius:10px;
+    border-radius:8px;
 
-    background:white;
+    background:#0b4f8a;
 
-    color:black;
+    color:white;
 
     font-weight:bold;
 
     cursor:pointer;
-
-    transition:.3s;
-}
-
-.auth-box button:hover{
-    opacity:.85;
 }
 
 .auth-box a{
+
     display:block;
+
+    text-align:center;
 
     margin-top:15px;
 
-    color:#888;
-
     text-decoration:none;
 
-    text-align:center;
+    color:#0b4f8a;
 }
 
-/* ==========================
+/* =========================
 RESPONSIVO
-========================== */
+========================= */
 
 @media(max-width:768px){
 
-.hero-content{
+.topo{
     flex-direction:column;
     text-align:center;
 }
 
-.hero-text h1{
-    font-size:2rem;
+main{
+    padding:15px;
 }
 
-.card-header{
-    flex-direction:column;
-    align-items:flex-start;
-}
-
-.status-badges{
-    width:100%;
-}
-
-.badge-nivel,
-.badge-xp{
-    flex:1;
-    text-align:center;
-}
-
-.logo-topo{
-    width:140px;
+.projetos{
+    grid-template-columns:1fr;
 }
 
 }
+```
